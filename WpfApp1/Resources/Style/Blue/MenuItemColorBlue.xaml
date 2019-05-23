@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1.Resources.Style.Dark">
+
+    <!-- Menu Title-->
+    <SolidColorBrush x:Key="Environment.CommandBarBackground" Color="#D6DBE9"/>
+    <SolidColorBrush x:Key="Environment.CommandBarTextActive" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuGlyph" Color="#1E1E1E"/>
+
+    <SolidColorBrush x:Key="Environment.CommandBarMouseOverBackground" Color="#FDF4BF"/>
+    <SolidColorBrush x:Key="Environment.CommandBarTextHover" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuMouseOverGlyph" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="Environment.CommandBarBorder" Color="#E5C365"/>
+
+    <SolidColorBrush x:Key="Environment.CommandBarMenuMouseDownGlyph" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuBorder" Color="#8591A2"/>
+
+    <SolidColorBrush x:Key="Environment.CommandBarTextInactive" Color="#A2A4A5"/>
+
+    <!-- Menu Items-->
+    <!-- Default-->
+    <SolidColorBrush x:Key="Environment.CommandBarMenuBackground" Color="#EAF0FF"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuSubmenuGlyph" Color="#000000"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuIconBackground" Color="#F2F4FE"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuSeparator" Color="#BEC3CB"/>
+    <SolidColorBrush x:Key="Environment.DropShadowBackground" Color="#000000"/>
+
+    <SolidColorBrush x:Key="Environment.CommandBarCheckBox" Color="#E9ECEE"/>
+    <SolidColorBrush x:Key="Environment.CommandBarSelectedIcon" Color="#FF3e3e40"/>
+    <SolidColorBrush x:Key="Environment.CommandBarSelected" Color="#00FF00"/>
+    <SolidColorBrush x:Key="Environment.CommandBarSelectedBorder" Color="#FF0000"/>
+
+    <!-- Hover -->
+    <SolidColorBrush x:Key="Environment.CommandBarMenuItemMouseOver" Color="#FDF4BF"/>
+    <SolidColorBrush x:Key="Environment.CommandBarMenuMouseOverSubmenuGlyph" Color="#000000"/>
+    <SolidColorBrush x:Key="Environment.CommandBarCheckBoxMouseOver" Color="#FFFCF4"/>
+    <SolidColorBrush x:Key="Environment.CommandBarHoverOverSelectedIcon" Color="#FF0000"/>
+    <SolidColorBrush x:Key="Environment.CommandBarHoverOverSelected" Color="#00FF00"/>
+    <SolidColorBrush x:Key="Environment.CommandBarHoverOverSelectedIconBorder" Color="#0000FF"/>
+
+    <!-- Disabled -->
+    <SolidColorBrush x:Key="Environment.CommandBarCheckBoxDisabled" Color="#A2A4A5"/>
+    <SolidColorBrush x:Key="Environment.CommandBarSelectedIconDisabled" Color="#A2A4A5"/>
+
+
+</ResourceDictionary>

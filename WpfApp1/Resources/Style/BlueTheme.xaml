@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\Blue\WindowColorBlue.xaml"/>
+        <ResourceDictionary Source=".\Blue\TextBoxColorBlue.xaml"/>
+        <ResourceDictionary Source=".\Blue\MenuItemColorBlue.xaml"/>
+        <ResourceDictionary Source=".\Blue\ButtonColorBlue.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

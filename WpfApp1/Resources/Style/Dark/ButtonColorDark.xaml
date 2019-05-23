@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1.Resources.Style.Dark">
+
+
+    <SolidColorBrush x:Key="CommonControls.ButtonTextActive" Color="#F1F1F1"/>
+    <SolidColorBrush x:Key="CommonControls.ButtonTextDisabled" Color="#656565"/>
+
+    <SolidColorBrush x:Key="CommonControls.Button" Color="#3F3F46"/>
+    <SolidColorBrush x:Key="CommonControls.ButtonBorder" Color="#555555"/>
+
+    <SolidColorBrush x:Key="CommonControls.ButtonDisabled" Color="#2D2D30"/>
+    <SolidColorBrush x:Key="CommonControls.ButtonBorderDisabled" Color="#3F3F46"/>
+
+    <SolidColorBrush x:Key="CommonControls.ButtonHover" Color="#3F3F46"/>
+    <SolidColorBrush x:Key="CommonControls.ButtonBorderHover" Color="#007ACC"/>
+
+    <SolidColorBrush x:Key="CommonControls.ButtonPressed" Color="#007ACC"/>
+    <SolidColorBrush x:Key="CommonControls.ButtonBorderPressed" Color="#007ACC"/>
+
+    <SolidColorBrush x:Key="CommonControls.ButtonFocused" Color="#3F3F46"/>
+    <SolidColorBrush x:Key="CommonControls.ButtonBorderFocused" Color="#007ACC"/>
+
+
+</ResourceDictionary>

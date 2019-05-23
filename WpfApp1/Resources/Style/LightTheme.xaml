@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\Light\WindowColorLight.xaml"/>
+        <ResourceDictionary Source=".\Light\TextBoxColorLight.xaml"/>
+        <ResourceDictionary Source=".\Light\MenuItemColorLight.xaml"/>
+        <ResourceDictionary Source=".\Light\ButtonColorLight.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

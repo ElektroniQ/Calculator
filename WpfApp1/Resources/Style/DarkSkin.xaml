@@ -1,0 +1,35 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfApp1.Resources.Skins"
+    >
+    <!-- Common Style -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\BaseSkin.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!-- Background Style -->
+    <Style x:Key="styleBackground">
+        <Setter Property="Control.Background">
+            <Setter.Value>
+                <SolidColorBrush Color="#FF2D2D30"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlock_Base}">
+        <Setter Property="Foreground" Value="#FFFFFFFF"/>
+    </Style>
+<!--
+    <Style x:Key="{x:Type Menu}"
+           TargetType="{x:Type Menu}"
+           BasedOn="{StaticResource Menu_Base}">
+        <Setter Property="Background" Value="#FF2D2D30"/>
+    </Style>
+
+    <Style x:Key="{x:Type MenuItem}"
+           TargetType="{x:Type MenuItem}"
+           BasedOn="{StaticResource MenuItem_Base}">
+        <Setter Property="Background" Value="#FF1b1b1c"/>
+    </Style>-->
+</ResourceDictionary>

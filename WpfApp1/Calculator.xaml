@@ -1,0 +1,298 @@
+﻿<Window x:Class="WpfApp1.Calculator"
+        x:Name="Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:metro="clr-namespace:WpfApp1.Resources.Style.Controls"
+        mc:Ignorable="d"
+        Title="Calculator" 
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanMinimize">
+
+    <Window.Resources>
+    </Window.Resources>
+
+    <Border BorderThickness="1" 
+            BorderBrush = "{DynamicResource Environment.WindowBorder}">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Direction="0" RenderingBias="Quality" ShadowDepth="5"/>
+            </Border.Effect>
+
+        <Grid Background="{DynamicResource Environment.WindowBackground}" 
+        RenderTransformOrigin="0.5,0.5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="50" />
+                <RowDefinition Height="Auto" MinHeight="50" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!--<Grid
+                Grid.ColumnSpan="4"
+                HorizontalAlignment="Stretch" ClipToBounds="True"
+                MouseLeftButtonDown="WindowBar_MouseLeftButtonDown"
+                Background="Transparent">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ContentControl Grid.Row="0" 
+                                Grid.Column="0"
+                                ContentTemplate="{DynamicResource CalculatorIcon}">
+
+                </ContentControl>
+
+                <TextBlock Grid.Column="1" 
+                           Text="{Binding Title, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
+                           VerticalAlignment="Center"
+                           FontSize="12">
+
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{DynamicResource FontColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+
+                <Button Grid.Row="0" 
+                        Grid.Column="5" 
+                        Margin="0" 
+                        MinWidth="20"
+                        MinHeight="20" 
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Click="MinimizeWindow">
+                    <ContentControl ContentTemplate="{DynamicResource MinimizeIcon}"></ContentControl>
+                </Button>
+                <Button Grid.Row="0" 
+                        Grid.Column="6" 
+                        Margin="0" 
+                        MinWidth="20"
+                        MinHeight="20" 
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <ContentControl ContentTemplate="{DynamicResource ApplicationGroupIcon}"></ContentControl>
+                </Button>
+                <Button Grid.Row="0" 
+                        Grid.Column="7" 
+                        Margin="0" 
+                        MinWidth="20"
+                        MinHeight="20"
+                        Click="Close_Click"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                    <ContentControl ContentTemplate="{DynamicResource CloseIcon}"></ContentControl>
+                </Button>
+            </Grid>-->
+
+            <metro:ApplicationBar
+                Grid.ColumnSpan="4"
+                CloseClick="Close_Click"
+                MinimizeClick="MinimizeWindow"
+                Drag="WindowBar_MouseLeftButtonDown">
+                
+            </metro:ApplicationBar>
+
+            <StackPanel Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        Grid.Row="1">
+                <Menu
+                    Foreground="{DynamicResource Environment.CommandBarTextActive}"
+                    Background="{DynamicResource Environment.CommandBarBackground}" >
+
+
+                    <MenuItem x:Name="Open" Header="_Test" >
+                        <MenuItem Header="_Open" />
+                    </MenuItem>
+                    <MenuItem x:Name="File" Header="_File" >
+                        <MenuItem x:Name="Open2" Header="_Open" >
+                            <MenuItem Header="_Open" />
+                        </MenuItem>
+                        <MenuItem x:Name="CloseMenuItem" Header="_Close" Click="Close_Click"/>
+                        <Separator/>
+                        <MenuItem x:Name="Save" Header="_Save" InputGestureText="Ctrl+S">
+                            <MenuItem.Icon>
+                                <ContentControl ContentTemplate="{DynamicResource SaveIcon}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_Options" >
+                        <MenuItem Header="_Theme">
+                            <MenuItem x:Name="MenuItemBlueTheme" Header="_Blue" Click="BlueThemeClick" IsCheckable="True"/>
+                            <MenuItem x:Name="MenuItemLightTheme" Header="_Light" Click="LightThemeClick" IsCheckable="True" />
+                            <MenuItem x:Name="MenuItemDarkTheme" Header="_Dark" Click="DarkThemeClick" IsCheckable="True"/>
+                        </MenuItem>
+
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+
+            <TextBox Name="calculationResult"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="4"
+                     Grid.Row="2"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"
+                     TextAlignment="Right"
+                     FontSize="25"
+                     VerticalContentAlignment="Center">
+                     0
+            </TextBox>
+
+
+            <Button Grid.Row="3" 
+                    Grid.Column="0" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    7
+            </Button>
+            <Button Grid.Row="3" 
+                    Grid.Column="1" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    8
+            </Button>
+            <Button Grid.Row="3" 
+                    Grid.Column="2" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    9
+            </Button>
+            <Button Grid.Row="4" 
+                    Grid.Column="0" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    4
+            </Button>
+            <Button Grid.Row="4" 
+                    Grid.Column="1" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    5
+            </Button>
+            <Button Grid.Row="4" 
+                    Grid.Column="2" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    6
+            </Button>
+            <Button Grid.Row="5" 
+                    Grid.Column="0" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    1
+            </Button>
+            <Button Grid.Row="5" 
+                    Grid.Column="1" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    2
+            </Button>
+            <Button Grid.Row="5" 
+                    Grid.Column="2" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    3
+            </Button>
+            <Button Grid.Row="6" 
+                    Grid.Column="2" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    .
+            </Button>
+            <Button Grid.Row="6" 
+                    Grid.Column="1" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    0
+            </Button>
+            <Button Grid.Row="6" 
+                    Grid.Column="0" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    =
+            </Button>
+
+            <Button Grid.Row="3" 
+                    Grid.Column="3" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    *
+            </Button>
+            <Button Grid.Row="4" 
+                    Grid.Column="3" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    /
+            </Button>
+            <Button Grid.Row="5" 
+                    Grid.Column="3" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    +
+            </Button>
+            <Button Grid.Row="6" 
+                    Grid.Column="3" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25">
+                    -
+            </Button>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1.Resources.Skins">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\Dark\WindowColorDark.xaml"/>
+        <ResourceDictionary Source=".\Dark\TextBoxColorDark.xaml"/>
+        <ResourceDictionary Source=".\Dark\MenuItemColorDark.xaml"/>
+        <ResourceDictionary Source=".\Dark\ButtonColorDark.xaml"/>
+        <ResourceDictionary Source=".\Dark\ApplicationBarColorDark.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

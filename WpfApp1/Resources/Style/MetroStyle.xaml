@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\Controls\TextBoxTemplate.xaml"/>
+        <ResourceDictionary Source=".\Controls\MenuItem.xaml"/>
+        <ResourceDictionary Source=".\Controls\Button.xaml"/>
+        <ResourceDictionary Source=".\Controls\Window.xaml"/>
+        <ResourceDictionary Source=".\Controls\ApplicationBarStyle.xaml"/>
+        <ResourceDictionary Source=".\Controls\BaseSkin.xaml"/>
+        <ResourceDictionary Source=".\Controls\IconSet.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

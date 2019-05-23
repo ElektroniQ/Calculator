@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1.Resources.Skins.Blue">
+
+    <SolidColorBrush x:Key="CommonControls.TextBoxBackground" Color="#FCFCFC"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxBorder" Color="#8591A2"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxText" Color="#1E1E1E"/>
+
+    <SolidColorBrush x:Key="CommonControls.TextBoxBackgroundDisabled" Color="#DFE7F3"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxBorderDisabled" Color="#A4ADBA"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxTextDisabled" Color="#A2A4A5"/>
+
+    <SolidColorBrush x:Key="CommonControls.TextBoxBackgroundHover" Color="#FCFCFC"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxBorderHover" Color="#E5C365"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxTextHover" Color="#000000"/>
+
+    <SolidColorBrush x:Key="CommonControls.TextBoxBackgroundFocused" Color="#FCFCFC"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxBorderFocused" Color="#E5C365"/>
+    <SolidColorBrush x:Key="CommonControls.TextBoxTextFocused" Color="#000000"/>
+
+    <SolidColorBrush x:Key="CommonControls.TextBoxTextInputSelection" Color="#007ACC"/>
+
+    
+</ResourceDictionary>

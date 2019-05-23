@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ForegroundMainColor">#FF2d2d30</Color>
+
+    <Color x:Key="FontColor">#FFf5f0f5</Color>
+    <Color x:Key="ButtonPressedColor">#FF007acc</Color>
+    <Color x:Key="ButtonOverColor">#FF3e3e40</Color>
+
+
+    <!-- TextBox Colors -->
+    <Color x:Key="TextBoxBackground_Disabled">#FF333337</Color>
+    <Color x:Key="TextBoxBackground_Enabled">#FF3f3f46</Color>
+    <Color x:Key="TextBoxBorder">#FF434346</Color>
+
+    <!--  MenuItem Colors  -->
+    <Color x:Key="MenuItem_TopLevelHeader_IsHighlighted_Color">#FF3e3e40</Color>
+    <Color x:Key="SubMenuItem_Color">#FF1b1b1c</Color>
+    <Color x:Key="SubMenuItem_IsHighlighted_Color">#FF333334</Color>
+    <!--<Color x:Key="SubMenuHeader_Checkmark_Color">Red</Color>-->
+    <Color x:Key="SubMenuHeader_Checkmark_Color">#FF2d2d30</Color>
+    <Color x:Key="SubMenuHeader_Checkmark_IsHighlighted_Color">#FF3e3e40</Color>
+    <Color x:Key="SubMenuHeader_Glyph_Color">#FF999999</Color>
+    <Color x:Key="SubMenuHeader_Glyph_IsHighlighted_Color">#FF007acc</Color>
+    
+    
+    <!--  Brushes  -->
+    <!--  TextBox  -->
+    <SolidColorBrush x:Key="TextBox_Background_Enabled_Brush" Color="{StaticResource TextBoxBackground_Enabled}" />
+    <SolidColorBrush x:Key="TextBox_Background_Disabled_Brush" Color="{StaticResource TextBoxBackground_Disabled}" />
+    <SolidColorBrush x:Key="TextBox_Border_Brush" Color="{StaticResource TextBoxBorder}" />
+    <SolidColorBrush x:Key="TextBox_Foreground_Brush" Color="{StaticResource FontColor}" />
+
+    <!--  MenuItem Brushes  -->
+    <!--  Separator  -->
+    <SolidColorBrush x:Key="MenuItem_Separator_Brush" Color="{StaticResource ForegroundMainColor}" />
+
+    <!--  MenuItem.TopLevelHeader Brushes  -->
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_Brush" Color="{StaticResource ForegroundMainColor}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_Border_Brush" Color="{StaticResource SubMenuHeader_Checkmark_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_IsMouseOver_Brush" Color="{StaticResource MenuItem_TopLevelHeader_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_IsOpen_Brush" Color="{StaticResource SubMenuItem_Color}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_IsDisabled_Brush" Color="Grey" />
+
+    <!--  MenuItem.TopLevelItem Brushes  -->
+    <SolidColorBrush x:Key="MenuItem_TopLevelItem_Brush" Color="{StaticResource ForegroundMainColor}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelItem_IsMouseOver_Brush" Color="{StaticResource MenuItem_TopLevelHeader_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelItem_IsOpen_Brush" Color="{StaticResource SubMenuItem_Color}" />
+    <SolidColorBrush x:Key="MenuItem_TopLevelItem_IsDisabled_Brush" Color="Grey" />
+
+
+    <!--  MenuItem.TopLevelHeader.Popup Brushes  -->
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_Popup_Border_Brush" Color="{StaticResource SubMenuHeader_Checkmark_IsHighlighted_Color}" />
+    <!--<SolidColorBrush x:Key="MenuItem_TopLevelHeader_Popup_Border_Brush" Color="Red" />-->
+    <SolidColorBrush x:Key="MenuItem_TopLevelHeader_Popup_Fill_Brush" Color="{StaticResource SubMenuItem_Color}" />
+
+    <!--  MenuItem.SubmenuItem Brushes  -->
+    <SolidColorBrush x:Key="MenuItem_SubmenuItem_Brush" Color="{StaticResource SubMenuItem_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItem_Check_Brush" Color="{StaticResource SubMenuHeader_Checkmark_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItem_IsMouseOver_Brush" Color="{StaticResource SubMenuItem_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItem_Check_IsMouseOver_Brush" Color="{StaticResource SubMenuHeader_Checkmark_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItem_IsDisabled_Brush" Color="Grey" />
+
+    <!--  MenuItem.SubmenuHeader  -->
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_Brush" Color="{StaticResource SubMenuItem_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_IsHighlighted_Brush" Color="{StaticResource SubMenuItem_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_Glyph_Brush" Color="{StaticResource SubMenuHeader_Glyph_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_Glyph_IsMouseOver_Brush" Color="{StaticResource SubMenuHeader_Glyph_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_IsDisabled_Brush" Color="Grey" />
+
+    <!--  MenuItem.SubmenuItemHeader.Popup Brushes  -->
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_Popup_Border_Brush" Color="{StaticResource SubMenuHeader_Checkmark_IsHighlighted_Color}" />
+    <SolidColorBrush x:Key="MenuItem_SubmenuItemHeader_Popup_Fill_Brush" Color="{StaticResource SubMenuItem_Color}" />
+
+
+</ResourceDictionary>
