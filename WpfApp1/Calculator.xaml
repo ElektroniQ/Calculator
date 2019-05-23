@@ -34,6 +34,7 @@
                 <RowDefinition Height="Auto" MinHeight="50" />
                 <RowDefinition Height="Auto" MinHeight="50" />
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -159,100 +160,132 @@
                      VerticalAlignment="Stretch"
                      TextAlignment="Right"
                      FontSize="25"
-                     VerticalContentAlignment="Center">
-                     0
+                     VerticalContentAlignment="Center"
+                     Text="{Binding InputTextBox, UpdateSourceTrigger=PropertyChanged}">
             </TextBox>
 
+            <Button Grid.Row="3" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2"
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25"
+                    Command="{Binding ButtonClearClickCommand}">
+                    C
+            </Button>
 
             <Button Grid.Row="3" 
+                    Grid.Column="2" 
+                    Grid.ColumnSpan="2"
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25"
+                    Command="{Binding ButtonBackspaceClickCommand}">
+                    &lt;
+            </Button>
+
+            <Button Grid.Row="4" 
                     Grid.Column="0" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonSevenClickCommand}">
                     7
             </Button>
-            <Button Grid.Row="3" 
+            <Button Grid.Row="4" 
                     Grid.Column="1" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonEightClickCommand}">
                     8
             </Button>
-            <Button Grid.Row="3" 
+            <Button Grid.Row="4" 
                     Grid.Column="2" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonNineClickCommand}">
                     9
             </Button>
-            <Button Grid.Row="4" 
+            <Button Grid.Row="5" 
                     Grid.Column="0" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonFourClickCommand}">
                     4
             </Button>
-            <Button Grid.Row="4" 
+            <Button Grid.Row="5" 
                     Grid.Column="1" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonFiveClickCommand}">
                     5
             </Button>
-            <Button Grid.Row="4" 
+            <Button Grid.Row="5" 
                     Grid.Column="2" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonSixClickCommand}">
                     6
             </Button>
-            <Button Grid.Row="5" 
+            <Button Grid.Row="6" 
                     Grid.Column="0" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonOneClickCommand}">
                     1
             </Button>
-            <Button Grid.Row="5" 
+            <Button Grid.Row="6" 
                     Grid.Column="1" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonTwoClickCommand}">
                     2
             </Button>
-            <Button Grid.Row="5" 
+            <Button Grid.Row="6" 
                     Grid.Column="2" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonThreeClickCommand}">
                     3
             </Button>
-            <Button Grid.Row="6" 
+            <Button Grid.Row="7" 
                     Grid.Column="2" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
-                    .
+                    FontSize="25"
+                    Command="{Binding ButtonCommaClickCommand}">
+                .
             </Button>
-            <Button Grid.Row="6" 
+            <Button Grid.Row="7" 
                     Grid.Column="1" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonZeroClickCommand}">
                     0
             </Button>
-            <Button Grid.Row="6" 
+            <Button Grid.Row="7" 
                     Grid.Column="0" 
                     Margin="2" 
                     MinWidth="50"
@@ -261,36 +294,40 @@
                     =
             </Button>
 
-            <Button Grid.Row="3" 
-                    Grid.Column="3" 
-                    Margin="2" 
-                    MinWidth="50"
-                    MinHeight="50"
-                    FontSize="25">
-                    *
-            </Button>
             <Button Grid.Row="4" 
                     Grid.Column="3" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
-                    /
+                    FontSize="25"
+                    Command="{Binding ButtonMultiClickCommand}">
+                    *
             </Button>
             <Button Grid.Row="5" 
                     Grid.Column="3" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
-                    +
+                    FontSize="25"
+                    Command="{Binding ButtonDivisionClickCommand}">
+                    /
             </Button>
             <Button Grid.Row="6" 
                     Grid.Column="3" 
                     Margin="2" 
                     MinWidth="50"
                     MinHeight="50"
-                    FontSize="25">
+                    FontSize="25"
+                    Command="{Binding ButtonPlusClickCommand}">
+                    +
+            </Button>
+            <Button Grid.Row="7" 
+                    Grid.Column="3" 
+                    Margin="2" 
+                    MinWidth="50"
+                    MinHeight="50"
+                    FontSize="25"
+                    Command="{Binding ButtonMinusClickCommand}">
                     -
             </Button>
         </Grid>

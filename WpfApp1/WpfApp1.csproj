@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CalculatorViewModel.cs" />
     <Compile Include="Resources\Style\Controls\AddConverter.cs" />
     <Compile Include="Resources\Style\Controls\ApplicationBar.xaml.cs">
       <DependentUpon>ApplicationBar.xaml</DependentUpon>
