@@ -160,6 +160,7 @@
                      VerticalAlignment="Stretch"
                      TextAlignment="Right"
                      FontSize="25"
+                     MinWidth="300"
                      VerticalContentAlignment="Center"
                      Text="{Binding InputTextBox, UpdateSourceTrigger=PropertyChanged}">
             </TextBox>

@@ -16,6 +16,7 @@ namespace WpfApp1.ViewModel
         char decimalSeparator;
 
         CalculatorModel calculatorModel;
+        private string lastParamString;
 
         protected void OnPropertyChanged(string input)
         {
@@ -62,7 +63,19 @@ namespace WpfApp1.ViewModel
             
             if(paramString == "backspace")
             {
-                InputTextBox = inputTextBox.Remove(inputTextBox.Length - 1);
+                if (lastParamString == "+"
+                    || lastParamString == "-" 
+                    || lastParamString == "*" 
+                    || lastParamString == "/"
+                    || lastParamString == "=")
+                {
+                    calculatorModel.Reset();
+                    InputTextBox = "0";
+                }
+
+                if (inputTextBox != "")
+                    InputTextBox = inputTextBox.Remove(inputTextBox.Length - 1);
+
                 if (inputTextBox == "")
                 {
                     InputTextBox = "0";
@@ -80,11 +93,19 @@ namespace WpfApp1.ViewModel
                 || paramString == "9"
                 || paramString == ".")
             {
+                if(lastParamString == "=")
+                {
+                    calculatorModel.Reset();
+                    inputTextBox = "";
+                }
+
                 AddCharToInput(paramString[0]);
+
             }
             else if(paramString == "clear")
             {
                 InputTextBox = "0";
+                calculatorModel.Reset();
             }
             else if(paramString == "+"
                 || paramString == "-"
@@ -92,11 +113,24 @@ namespace WpfApp1.ViewModel
                 || paramString == "/"
                 || paramString == "=")
             {
-                double inputValue = Double.Parse(InputTextBox);
+                double inputValue = 0;
+                if (InputTextBox != "")
+                {
+                    inputValue = Double.Parse(InputTextBox);
+                }
+
                 calculatorModel.InputNumber(inputValue);
-                calculatorModel.InputAddOperator(paramString);
-                InputTextBox = calculatorModel.Compute().ToString();
+                calculatorModel.InputOperator(StringToOperator(paramString));
+
+                InputTextBox = calculatorModel.GetCurrentResult().ToString();
+
+                if (paramString != "=")
+                {
+                    inputTextBox = "";
+                }
             }
+
+            lastParamString = paramString;
         }
 
         private void AddCharToInput(char ch)
@@ -128,7 +162,35 @@ namespace WpfApp1.ViewModel
                 InputTextBox += ch;
             }
         }
+        private CalculatorModel.Operator StringToOperator(String input)
+        {
+            if (input == "=")
+            {
+                return CalculatorModel.Operator.OPERATOR_EQUALS;
+            }
+            else if (input == "+")
+            {
+                return CalculatorModel.Operator.OPERATOR_PLUS;
+            }
+            else if (input == "-")
+            {
+                return CalculatorModel.Operator.OPERATOR_MINUS;
+
+            }
+            else if (input == "*")
+            {
+                return CalculatorModel.Operator.OPERATOR_MULTIPLY;
+            }
+            else if (input == "/")
+            {
+                return CalculatorModel.Operator.OPERATOR_DIVISION;
+            }
+            else
+                return CalculatorModel.Operator.OPERATOR_NOT_DEFINED;
+        }
     }
+
+   
 
     public class CommandHandler : ICommand
     {
